@@ -5,118 +5,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yangqing Jia</title>
-    <meta name="description"
-        content="Personal website of Yangqing Jia, Founder of Lepton AI, creator of Caffe and lead of PyTorch 1.0.">
+    <meta name="description" content="Personal website of Yangqing Jia.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gray: {
+                            900: '#1a1a1a', // Title/Dark text
+                            800: '#2d2d2d',
+                            600: '#555555', // Description text
+                            500: '#737373',
+                            200: '#eeeeee', // Borders
+                        }
+                    },
+                    spacing: {
+                        '700': '700px',
+                    }
+                }
+            }
+        }
+    </script>
+
     <!-- Icons (Lucide via UNPKG) -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-white text-gray-900 font-sans antialiased text-base leading-relaxed">
 
-    <div class="container">
+    <div class="max-w-[700px] mx-auto px-6 py-20">
         <!-- Header -->
-        <header>
-            <h1>
-                Yangqing Jia
-                <span class="name-extra">
-                    (贾扬清 <a href="http://en.wikipedia.org/wiki/Chinese_character" title="Explanation of Chinese Name"
-                        style="color:inherit; text-decoration:none; display:inline-flex; align-items:center;"><i
-                            data-lucide="help-circle" style="width:16px; height:16px;"></i></a>)
-                </span>
-            </h1>
-            <p class="intro">
-                Building the new AI cloud at <a href="https://lepton.ai/">Lepton AI</a>.
-            </p>
+        <header class="flex flex-col sm:flex-row items-start gap-8 mb-12">
+            <!-- Profile Image: Left Aligned -->
+            <div class="flex-shrink-0">
+                <img src="assets/img/Yangqing_2.jpg" alt="Yangqing Jia"
+                    class="w-[125px] h-[125px] rounded-lg object-cover">
+            </div>
 
-
+            <!-- Header Text -->
+            <div class="flex-1 min-w-0">
+                <h1 class="text-4xl font-bold text-gray-900 mb-2 tracking-tight leading-none -mt-[6px]">
+                    Yangqing Jia
+                    <span class="text-gray-600 text-[0.8em] font-bold ml-2 align-middle">
+                        (贾扬清 <a href="http://en.wikipedia.org/wiki/Chinese_character"
+                            title="Explanation of Chinese Name"
+                            class="inline-flex items-center text-inherit no-underline hover:opacity-80"><i
+                                data-lucide="help-circle" class="w-4 h-4"></i></a>)
+                    </span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-4">
+                    I am excited about the unleashed productivity of AI combined with human ingenuity.
+                </p>
+                <div class="flex items-center gap-4 text-sm mt-3">
+                    <a href="https://x.com/jiayq" target="_blank" aria-label="X (Twitter)"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/pub/yangqing-jia/b/37/a67" target="_blank" aria-label="LinkedIn"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Yangqing" target="_blank" aria-label="GitHub"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.11.81 2.235 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="mailto:me@daggerfs.com" aria-label="Email"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2.25 18.75V7.5L12 14.25L21.75 7.5V18.75H2.25ZM12 12.75L2.25 6H21.75L12 12.75Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </header>
 
         <!-- Experiences -->
-        <section>
-            <h2>Experiences</h2>
-            <ul class="experience-list">
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 tracking-tight">Experiences</h2>
+            <ul class="list-none space-y-6">
                 <!-- Nvidia -->
-                <li class="experience-item">
-                    <div class="experience-header">
-                        <span class="role">VP,</span>
-                        <a href="https://www.nvidia.com" class="company-link" target="_blank">
-                            <img src="https://icons.duckduckgo.com/ip3/nvidia.com.ico" alt="Nvidia Logo"
-                                class="company-logo" onerror="this.style.display='none'">
-                            Nvidia
+                <li>
+                    <div class="mb-1 text-base">
+                        <span class="font-semibold text-gray-900 mr-2">VP</span>
+                        <a href="https://www.nvidia.com" target="_blank"
+                            class="font-medium text-gray-900 hover:underline">
+                            <img src="https://icons.duckduckgo.com/ip3/nvidia.com.ico" alt="NVIDIA Logo"
+                                class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
+                                onerror="this.style.display='none'">
+                            NVIDIA
                         </a>
                     </div>
-                    <p class="description">
-                        VP of AI and Analytics.
+                    <p class="text-[15px] text-gray-600 mt-1">
+                        Building AI for system software and cloud services for AI.
                     </p>
                 </li>
 
                 <!-- Lepton AI -->
-                <li class="experience-item">
-                    <div class="experience-header">
-                        <span class="role">Founder and CEO,</span>
-                        <a href="https://lepton.ai" class="company-link" target="_blank">
-                            <img src="assets/lepton_logo.svg" alt="Lepton AI Logo" class="company-logo"
+                <li>
+                    <div class="mb-1 text-base">
+                        <span class="font-semibold text-gray-900 mr-2">Founder and CEO</span>
+                        <a href="https://lepton.ai" target="_blank" class="font-medium text-gray-900 hover:underline">
+                            <img src="assets/lepton_logo.svg" alt="Lepton AI Logo"
+                                class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
                                 onerror="this.style.display='none'">
-                            Lepton AI
+                            Lepton AI (acquired by NVIDIA)
                         </a>
                     </div>
-                    <p class="description">
-                        Building the new AI cloud. Simplifying AI application development and deployment.
+                    <p class="text-[15px] text-gray-600 mt-1">
+                        Lepton is the new AI cloud and the only ClusterMax Gold platform across multiple clouds.
                     </p>
                 </li>
 
                 <!-- Alibaba -->
-                <li class="experience-item">
-                    <div class="experience-header">
-                        <span class="role">VP,</span>
-                        <a href="https://www.alibabacloud.com" class="company-link" target="_blank">
-                            <img src="assets/alibaba.svg" alt="Alibaba Logo" class="company-logo"
+                <li>
+                    <div class="mb-1 text-base">
+                        <span class="font-semibold text-gray-900 mr-2">VP</span>
+                        <a href="https://www.alibabacloud.com" target="_blank"
+                            class="font-medium text-gray-900 hover:underline">
+                            <img src="assets/alibaba.svg" alt="Alibaba Logo"
+                                class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
                                 onerror="this.style.display='none'">
                             Alibaba Group
                         </a>
                     </div>
-                    <p class="description">
-                        Served as VP of Alibaba Group and President of the Alibaba Cloud's Computing Platform business
-                        unit. Built cloud-based big data and AI platforms serving public and private cloud clients.
+                    <p class="text-[15px] text-gray-600 mt-1">
+                        Scaling data analytics and AI product as President of Alibaba Cloud's Computing Platform. Head
+                        of System AI Lab, Damo Academy.
                     </p>
                 </li>
 
                 <!-- Facebook -->
-                <li class="experience-item">
-                    <div class="experience-header">
-                        <span class="role">Director of Engineering,</span>
-                        <a href="https://meta.com" class="company-link" target="_blank">
+                <li>
+                    <div class="mb-1 text-base">
+                        <span class="font-semibold text-gray-900 mr-2">Director of Engineering</span>
+                        <a href="https://meta.com" target="_blank" class="font-medium text-gray-900 hover:underline">
                             <img src="https://icons.duckduckgo.com/ip3/facebook.com.ico" alt="Facebook Logo"
-                                class="company-logo" onerror="this.style.display='none'">
+                                class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
+                                onerror="this.style.display='none'">
                             Facebook
                         </a>
                     </div>
-                    <p class="description">
+                    <p class="text-[15px] text-gray-600 mt-1">
                         Initiated and built Facebook's general-purpose AI platform (backbone for ranking, CV, NLP).
                         Co-lead of PyTorch 1.0. Created Caffe2 and ONNX.
                     </p>
                 </li>
 
                 <!-- Google -->
-                <li class="experience-item">
-                    <div class="experience-header">
-                        <span class="role">Research Scientist,</span>
-                        <a href="https://google.com" class="company-link" target="_blank">
+                <li>
+                    <div class="mb-1 text-base">
+                        <span class="font-semibold text-gray-900 mr-2">Research Scientist</span>
+                        <a href="https://google.com" target="_blank" class="font-medium text-gray-900 hover:underline">
                             <img src="https://icons.duckduckgo.com/ip3/google.com.ico" alt="Google Logo"
-                                class="company-logo" onerror="this.style.display='none'">
+                                class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
+                                onerror="this.style.display='none'">
                             Google Brain
                         </a>
                     </div>
-                    <p class="description">
+                    <p class="text-[15px] text-gray-600 mt-1">
                         Worked on computer vision, deep learning, and TensorFlow. Co-creator of GoogLeNet (Inception).
                     </p>
                 </li>
@@ -124,54 +193,102 @@
         </section>
 
         <!-- Projects -->
-        <section>
-            <h2>Open Source Projects</h2>
-            <ul class="project-list">
-                <li class="project-item">
-                    <div class="project-title"><a href="http://caffe.berkeleyvision.org/" target="_blank">Caffe</a>
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 tracking-tight">Projects</h2>
+            <ul class="list-none space-y-6">
+                <!-- Lepton Search -->
+                <li>
+                    <div class="mb-1 font-semibold text-gray-900">
+                        <a href="https://github.com/leptonai/search_with_lepton" target="_blank"
+                            class="hover:underline flex items-center">
+                            <img src="assets/lepton_logo.svg" alt="Lepton Logo" class="w-4 h-4 mr-2 object-contain">
+                            Lepton Search
+                        </a>
                     </div>
-                    <p class="project-desc">Creator. One of the first widely adopted deep learning frameworks.</p>
+                    <p class="text-gray-600">Fully open sourced demo of conversational search engine built with Lepton
+                        AI.</p>
                 </li>
-                <li class="project-item">
-                    <div class="project-title"><a href="https://pytorch.org/" target="_blank">PyTorch 1.0</a></div>
-                    <p class="project-desc">Co-lead. Unified research and production capabilities for deep learning.</p>
-                </li>
-                <li class="project-item">
-                    <div class="project-title"><a href="https://caffe2.ai/" target="_blank">Caffe2</a></div>
-                    <p class="project-desc">Creator. High-performance AI capability for mobile and cloud.</p>
-                </li>
-                <li class="project-item">
-                    <div class="project-title"><a href="https://onnx.ai/" target="_blank">ONNX</a></div>
-                    <p class="project-desc">Co-creator. Open Neutral Network Exchange standard.</p>
-                </li>
-                <li class="project-item">
-                    <div class="project-title"><a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a>
+                <!-- Caffe / Caffe2 -->
+                <li>
+                    <div class="mb-1 font-semibold text-gray-900">
+                        <a href="https://caffe.berkeleyvision.org/" target="_blank"
+                            class="hover:underline flex items-center">
+                            <img src="assets/caffe2.svg" alt="Caffe2 Logo" class="w-4 h-4 mr-2 object-contain">
+                            Caffe / Caffe2
+                        </a>
                     </div>
-                    <p class="project-desc">Contributor. Worked on the early design and implementation at Google Brain.
+                    <p class="text-gray-600">Creator. One of the first widely adopted deep learning frameworks.
+                        High-performance AI capability for mobile and cloud.</p>
+                </li>
+                <!-- PyTorch 1.0 -->
+                <li>
+                    <div class="mb-1 font-semibold text-gray-900">
+                        <a href="https://pytorch.org" target="_blank" class="hover:underline flex items-center">
+                            <img src="assets/pytorch.svg" alt="PyTorch Logo" class="w-4 h-4 mr-2 object-contain">
+                            PyTorch
+                        </a>
+                    </div>
+                    <p class="text-gray-600">Co-lead of PyTorch 1.0. Unified research and production capabilities for
+                        deep learning.
+                    </p>
+                </li>
+                <!-- ONNX -->
+                <li>
+                    <div class="mb-1 font-semibold text-gray-900">
+                        <a href="https://onnx.org" target="_blank" class="hover:underline flex items-center">
+                            <img src="assets/onnx.png" alt="ONNX Logo" class="w-4 h-4 mr-2 object-contain">
+                            ONNX
+                        </a>
+                    </div>
+                    <p class="text-gray-600">Co-creator. Open Neural Network Exchange standard.</p>
+                </li>
+                <li>
+                    <div class="mb-1 font-semibold text-gray-900">
+                        <a href="https://www.tensorflow.org/" target="_blank" class="hover:underline flex items-center">
+                            <img src="assets/tensorflow.svg" alt="TensorFlow Logo" class="w-4 h-4 mr-2 object-contain">
+                            TensorFlow
+                        </a>
+                    </div>
+                    <p class="text-gray-600">Contributor. Worked on the early design and implementation at Google Brain.
                     </p>
                 </li>
             </ul>
         </section>
 
+        <!-- Education -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 tracking-tight">Education</h2>
+            <ul class="list-none space-y-6">
+                <li>
+                    <div class="mb-1 text-base">
+                        <img src="assets/berkeley.svg" alt="UC Berkeley Logo"
+                            class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
+                            onerror="this.style.display='none'">
+                        <span class="font-semibold text-gray-900 mr-2">UC Berkeley</span>
+                        <span class="text-gray-900">PhD, EECS</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mb-1 text-base">
+                        <img src="assets/tsinghua.svg" alt="Tsinghua University Logo"
+                            class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
+                            onerror="this.style.display='none'">
+                        <span class="font-semibold text-gray-900 mr-2">Tsinghua University</span>
+                        <span class="text-gray-900">BS and MS, Control Science and Engineering</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
         <!-- Footer / Legacy -->
-        <footer>
-            <div class="social-links">
-                <a href="https://x.com/jiayq" target="_blank">
-                    <i data-lucide="twitter"></i> X (formerly Twitter)
-                </a>
-                <a href="https://www.linkedin.com/pub/yangqing-jia/b/37/a67" target="_blank">
-                    <i data-lucide="linkedin"></i> LinkedIn
-                </a>
-                <a href="mailto:me@daggerfs.com">
-                    <i data-lucide="mail"></i> me@daggerfs.com
-                </a>
-            </div>
+        <footer class="mt-16 pt-6 border-t border-gray-200 text-sm text-gray-600">
             <p>
-                <a href="/legacy/index.html">Old Academic Website</a>
+                <a href="/legacy/index.html" class="hover:text-gray-900 hover:underline">Old Academic Website</a>
             </p>
-            <p style="margin-top: 8px; font-size: 12px; color: #999;">
+            <p class="mt-2 text-xs text-gray-500">
                 &copy;
-                <script>document.write(new Date().getFullYear())</script> Yangqing Jia.
+                <script>document.write(new Date().getFullYear())</script> Yangqing Jia. Made with 100% AI generated
+                code.
             </p>
         </footer>
     </div>

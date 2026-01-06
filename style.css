@@ -21,7 +21,7 @@
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-background-color: var(--color-bg);
+
 
 * {
     box-sizing: border-box;
@@ -59,13 +59,34 @@ a:hover {
 
 /* Header Section */
 header {
-    margin-bottom: var(--space-10);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: var(--space-8);
+}
+
+.header-text {
+    flex: 1;
+}
+
+.header-image {
+    flex-shrink: 0;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 h1 {
     font-size: 36px;
     font-weight: 700;
     color: var(--color-text);
+    line-height: 1.1;
+    /* Tighter line height for better top alignment */
     margin-bottom: var(--space-2);
     letter-spacing: -0.02em;
 }
@@ -88,16 +109,26 @@ h1 {
     display: flex;
     gap: var(--space-4);
     font-size: 14px;
-    margin-top: var(--space-4);
-    margin-bottom: var(--space-4);
+    margin-top: var(--space-2);
+    /* Reduced margin for tighter look */
+    /* margin-bottom removed as it's not needed in header context */
 }
 
 .social-links a {
     display: flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
     color: var(--color-text-light);
+    /* Grayscale look */
+    transition: color 0.2s ease;
 }
+
+.social-links a:hover {
+    color: var(--color-text);
+    /* Darker on hover */
+}
+
+/* Removed original .social-links a block with gap */
 
 .social-links a:hover {
     color: var(--color-text);
@@ -194,7 +225,17 @@ footer {
         padding: 40px 20px;
     }
 
+    header {
+        flex-direction: column;
+        gap: 24px;
+    }
+
     h1 {
         font-size: 28px;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: auto;
     }
 }
