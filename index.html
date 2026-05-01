@@ -7,6 +7,18 @@
     <title>Yangqing Jia</title>
     <meta name="description" content="Personal website of Yangqing Jia.">
 
+    <!-- OpenGraph / Twitter -->
+    <meta property="og:title" content="Yangqing Jia">
+    <meta property="og:description" content="Personal website of Yangqing Jia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://daggerfs.com/">
+    <meta property="og:image" content="https://daggerfs.com/assets/img/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@jiayq">
+    <meta name="twitter:title" content="Yangqing Jia">
+    <meta name="twitter:description" content="Personal website of Yangqing Jia.">
+    <meta name="twitter:image" content="https://daggerfs.com/assets/img/profile.jpg">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,9 +49,6 @@
             }
         }
     </script>
-
-    <!-- Icons (Lucide via UNPKG) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased text-base leading-relaxed">
@@ -49,7 +58,7 @@
         <header class="flex flex-col sm:flex-row items-start gap-8 mb-12">
             <!-- Profile Image: Left Aligned -->
             <div class="flex-shrink-0">
-                <img src="assets/img/Yangqing_2.jpg" alt="Yangqing Jia"
+                <img src="assets/img/profile.jpg" alt="Yangqing Jia"
                     class="w-[125px] h-[125px] rounded-lg object-cover">
             </div>
 
@@ -60,8 +69,14 @@
                     <span class="text-gray-600 text-[0.8em] font-bold ml-2 align-middle">
                         (贾扬清 <a href="http://en.wikipedia.org/wiki/Chinese_character"
                             title="Explanation of Chinese Name"
-                            class="inline-flex items-center text-inherit no-underline hover:opacity-80"><i
-                                data-lucide="help-circle" class="w-4 h-4"></i></a>)
+                            class="inline-flex items-center text-inherit no-underline hover:opacity-80"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <path d="M12 17h.01"></path>
+                            </svg></a>)
                     </span>
                 </h1>
                 <p class="text-lg text-gray-600 mb-4">
@@ -112,7 +127,7 @@
                         <span class="font-semibold text-gray-900 mr-2">VP</span>
                         <a href="https://www.nvidia.com" target="_blank"
                             class="font-medium text-gray-900 hover:underline">
-                            <img src="https://icons.duckduckgo.com/ip3/nvidia.com.ico" alt="NVIDIA Logo"
+                            <img src="assets/logos/nvidia.ico" alt="NVIDIA Logo"
                                 class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
                                 onerror="this.style.display='none'">
                             NVIDIA
@@ -128,7 +143,7 @@
                     <div class="mb-1 text-base">
                         <span class="font-semibold text-gray-900 mr-2">Founder and CEO</span>
                         <a href="https://lepton.ai" target="_blank" class="font-medium text-gray-900 hover:underline">
-                            <img src="assets/lepton_logo.svg" alt="Lepton AI Logo"
+                            <img src="assets/logos/lepton.svg" alt="Lepton AI Logo"
                                 class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
                                 onerror="this.style.display='none'">
                             Lepton AI (acquired by NVIDIA)
@@ -145,7 +160,7 @@
                         <span class="font-semibold text-gray-900 mr-2">VP</span>
                         <a href="https://www.alibabacloud.com" target="_blank"
                             class="font-medium text-gray-900 hover:underline">
-                            <img src="assets/alibaba.svg" alt="Alibaba Logo"
+                            <img src="assets/logos/alibaba.svg" alt="Alibaba Logo"
                                 class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
                                 onerror="this.style.display='none'">
                             Alibaba Group
@@ -162,7 +177,7 @@
                     <div class="mb-1 text-base">
                         <span class="font-semibold text-gray-900 mr-2">Director of Engineering</span>
                         <a href="https://meta.com" target="_blank" class="font-medium text-gray-900 hover:underline">
-                            <img src="https://icons.duckduckgo.com/ip3/facebook.com.ico" alt="Facebook Logo"
+                            <img src="assets/logos/facebook.ico" alt="Facebook Logo"
                                 class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
                                 onerror="this.style.display='none'">
                             Facebook
@@ -179,7 +194,7 @@
                     <div class="mb-1 text-base">
                         <span class="font-semibold text-gray-900 mr-2">Research Scientist</span>
                         <a href="https://google.com" target="_blank" class="font-medium text-gray-900 hover:underline">
-                            <img src="https://icons.duckduckgo.com/ip3/google.com.ico" alt="Google Logo"
+                            <img src="assets/logos/google.ico" alt="Google Logo"
                                 class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
                                 onerror="this.style.display='none'">
                             Google Brain
@@ -201,7 +216,7 @@
                     <div class="mb-1 font-semibold text-gray-900">
                         <a href="https://github.com/leptonai/search_with_lepton" target="_blank"
                             class="hover:underline flex items-center">
-                            <img src="assets/lepton_logo.svg" alt="Lepton Logo" class="w-4 h-4 mr-2 object-contain">
+                            <img src="assets/logos/lepton.svg" alt="Lepton Logo" class="w-4 h-4 mr-2 object-contain">
                             Lepton Search
                         </a>
                     </div>
@@ -213,7 +228,7 @@
                     <div class="mb-1 font-semibold text-gray-900">
                         <a href="https://caffe.berkeleyvision.org/" target="_blank"
                             class="hover:underline flex items-center">
-                            <img src="assets/caffe2.svg" alt="Caffe2 Logo" class="w-4 h-4 mr-2 object-contain">
+                            <img src="assets/logos/caffe2.svg" alt="Caffe2 Logo" class="w-4 h-4 mr-2 object-contain">
                             Caffe / Caffe2
                         </a>
                     </div>
@@ -224,7 +239,7 @@
                 <li>
                     <div class="mb-1 font-semibold text-gray-900">
                         <a href="https://pytorch.org" target="_blank" class="hover:underline flex items-center">
-                            <img src="assets/pytorch.svg" alt="PyTorch Logo" class="w-4 h-4 mr-2 object-contain">
+                            <img src="assets/logos/pytorch.svg" alt="PyTorch Logo" class="w-4 h-4 mr-2 object-contain">
                             PyTorch
                         </a>
                     </div>
@@ -236,7 +251,7 @@
                 <li>
                     <div class="mb-1 font-semibold text-gray-900">
                         <a href="https://onnx.ai" target="_blank" class="hover:underline flex items-center">
-                            <img src="assets/onnx.png" alt="ONNX Logo" class="w-4 h-4 mr-2 object-contain">
+                            <img src="assets/logos/onnx.png" alt="ONNX Logo" class="w-4 h-4 mr-2 object-contain">
                             ONNX
                         </a>
                     </div>
@@ -245,7 +260,7 @@
                 <li>
                     <div class="mb-1 font-semibold text-gray-900">
                         <a href="https://www.tensorflow.org/" target="_blank" class="hover:underline flex items-center">
-                            <img src="assets/tensorflow.svg" alt="TensorFlow Logo" class="w-4 h-4 mr-2 object-contain">
+                            <img src="assets/logos/tensorflow.svg" alt="TensorFlow Logo" class="w-4 h-4 mr-2 object-contain">
                             TensorFlow
                         </a>
                     </div>
@@ -261,7 +276,7 @@
             <ul class="list-none space-y-6">
                 <li>
                     <div class="mb-1 text-base">
-                        <img src="assets/berkeley.svg" alt="UC Berkeley Logo"
+                        <img src="assets/logos/berkeley.svg" alt="UC Berkeley Logo"
                             class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
                             onerror="this.style.display='none'">
                         <span class="font-semibold text-gray-900 mr-2">UC Berkeley</span>
@@ -270,7 +285,7 @@
                 </li>
                 <li>
                     <div class="mb-1 text-base">
-                        <img src="assets/tsinghua.svg" alt="Tsinghua University Logo"
+                        <img src="assets/logos/tsinghua.svg" alt="Tsinghua University Logo"
                             class="w-4 h-4 rounded-sm inline mr-1 align-middle relative -top-[2px] object-contain"
                             onerror="this.style.display='none'">
                         <span class="font-semibold text-gray-900 mr-2">Tsinghua University</span>
@@ -293,10 +308,6 @@
         </footer>
     </div>
 
-    <!-- Initialize Lucide Icons -->
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 
 </html>
