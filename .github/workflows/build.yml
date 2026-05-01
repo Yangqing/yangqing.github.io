@@ -1,0 +1,42 @@
+name: Build CSS
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'index.html'
+      - 'src/input.css'
+      - 'tailwind.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/build.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Commit rebuilt CSS if changed
+        run: |
+          if git diff --quiet assets/styles.css; then
+            echo "assets/styles.css is up to date"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/styles.css
+            git commit -m "ci: rebuild assets/styles.css"
+            git push
+          fi
