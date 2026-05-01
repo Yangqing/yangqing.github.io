@@ -1,0 +1,11 @@
+{
+  "name": "yangqing.github.io",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o assets/styles.css --minify",
+    "watch": "tailwindcss -i src/input.css -o assets/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
