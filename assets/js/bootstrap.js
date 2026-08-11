@@ -26,35 +26,30 @@
   /* CSS TRANSITION SUPPORT (http://www.modernizr.com/)
    * ======================================================= */
 
-  $(function () {
-
-    $.support.transition = (function () {
-
-      var transitionEnd = (function () {
-
-        var el = document.createElement('bootstrap')
-          , transEndEventNames = {
-               'WebkitTransition' : 'webkitTransitionEnd'
-            ,  'MozTransition'    : 'transitionend'
-            ,  'OTransition'      : 'oTransitionEnd otransitionend'
-            ,  'transition'       : 'transitionend'
-            }
-          , name
-
-        for (name in transEndEventNames){
-          if (el.style[name] !== undefined) {
-            return transEndEventNames[name]
-          }
+  function transitionEnd() {
+    var el = document.createElement('bootstrap')
+      , transEndEventNames = {
+           'WebkitTransition' : 'webkitTransitionEnd'
+        ,  'MozTransition'    : 'transitionend'
+        ,  'OTransition'      : 'oTransitionEnd otransitionend'
+        ,  'transition'       : 'transitionend'
         }
+      , name
 
-      }())
-
-      return transitionEnd && {
-        end: transitionEnd
+    for (name in transEndEventNames){
+      if (el.style[name] !== undefined) {
+        return transEndEventNames[name]
       }
+    }
+  }
 
-    })()
+  function detectTransition() {
+    var end = transitionEnd()
+    return end && { end: end }
+  }
 
+  $(function () {
+    $.support.transition = detectTransition()
   })
 
 }(window.jQuery);/* ==========================================================
